@@ -1,7 +1,7 @@
 {
-  "name": "mern-setup",
+  "name": "movie-library",
   "version": "1.0.0",
-  "description": "A MERN setup (MongoDB, ExpressJS, ReactJS, NodeJS)",
+  "description": "A movie library using a MERN setup (MongoDB, ExpressJS, ReactJS, NodeJS)",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greit0n/mern-setup.git"
+    "url": "git+https://github.com/greit0n/movie-library.git"
   },
   "author": "Georgi Damyanov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/greit0n/mern-setup/issues"
+    "url": "https://github.com/greit0n/movie-library/issues"
   },
-  "homepage": "https://github.com/greit0n/mern-setup#readme",
+  "homepage": "https://github.com/greit0n/movie-library#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
     "config": "^3.3.9",

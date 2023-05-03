@@ -1,13 +1,11 @@
 # Overview
 
-This is a basic MERN setup that used the following technologies:
+This is a movie library based on the following technologies:
 
 -   MongoDB
 -   ExpressJS
 -   ReactJS
 -   NodeJS
-
-This setup is based on: https://blog.logrocket.com/mern-stack-tutorial/
 
 # Install dependencies
 
@@ -21,7 +19,7 @@ You need to install all the required npm packages for the server. Run the follow
 
 You need to install all the required npm packages for the client. Run the following command in the client folder:
 
--   `cd mern_setup_client`
+-   `cd client`
 -   `npm install`
 
 # Configuration
@@ -47,7 +45,7 @@ To start the server go to the root folder and run the following command:
 
 ## Client
 
-To start the client go to the `mern_setup_client` folder and run the following command:
+To start the client go to the `client` folder and run the following command:
 
 -   `npm start`
 
