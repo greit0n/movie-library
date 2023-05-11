@@ -37,18 +37,48 @@ function ShowMovieDetails(props) {
                 <tbody>
                     <tr>
                         <th scope='row'>1</th>
-                        <td>Title</td>
-                        <td>{movie.title}</td>
+                        <td>Id</td>
+                        <td>{movie.id}</td>
                     </tr>
                     <tr>
                         <th scope='row'>2</th>
-                        <td>Description</td>
-                        <td>{movie.description}</td>
+                        <td>imDB ID</td>
+                        <td>{movie.imdb_id}</td>
                     </tr>
                     <tr>
                         <th scope='row'>3</th>
+                        <td>Title</td>
+                        <td>{movie.title ?? movie.name}</td>
+                    </tr>
+                    <tr>
+                        <th scope='row'>4</th>
+                        <td>Overview</td>
+                        <td>{movie.overview}</td>
+                    </tr>
+                    <tr>
+                        <th scope='row'>5</th>
                         <td>Image</td>
-                        <td>{movie.img}</td>
+                        <td>{movie.poster_path}</td>
+                    </tr>
+                    <tr>
+                        <th scope='row'>6</th>
+                        <td>Release Date</td>
+                        <td>{movie.release_date ?? movie.first_air_date}</td>
+                    </tr>
+                    <tr>
+                        <th scope='row'>7</th>
+                        <td>Original language</td>
+                        <td>{movie.original_language}</td>
+                    </tr>
+                    <tr>
+                        <th scope='row'>8</th>
+                        <td>Eli's rating</td>
+                        <td>{movie.rating_1}</td>
+                    </tr>
+                    <tr>
+                        <th scope='row'>9</th>
+                        <td>Georgi's rating</td>
+                        <td>{movie.rating_2}</td>
                     </tr>
                 </tbody>
             </table>
@@ -70,7 +100,9 @@ function ShowMovieDetails(props) {
                     </div>
                     <br />
                     <div className='col-md-8 m-auto'>
-                        <h1 className='display-4 text-center'>Movie's Record</h1>
+                        <h1 className='display-4 text-center'>
+                            Movie's Record
+                        </h1>
                         <p className='lead text-center'>View Movie's Details</p>
                         <hr /> <br />
                     </div>
