@@ -10,7 +10,9 @@ const MovieSchema = new mongoose.Schema({
     },
     title: {
         type: String,
-        required: true,
+    },
+    name: {
+        type: String,
     },
     overview: {
         type: String,
@@ -22,7 +24,9 @@ const MovieSchema = new mongoose.Schema({
     },
     release_date: {
         type: Date,
-        required: true,
+    },
+    first_air_date: {
+        type: Date,
     },
     original_language: {
         type: String,

@@ -8,12 +8,12 @@ function UpdateMovieDetails(props) {
         id: '',
         imdb_id: '',
         title: '',
+        name: '',
         overview: '',
         poster_path: '',
         release_date: '',
+        first_air_date: '',
         original_language: '',
-        budget: '',
-        revenue: '',
         rating_1: '',
         rating_2: '',
     });
@@ -29,12 +29,12 @@ function UpdateMovieDetails(props) {
                     id: res.data.id,
                     imdb_id: res.data.imdb_id,
                     title: res.data.title,
+                    name: res.data.name,
                     overview: res.data.overview,
                     poster_path: res.data.poster_path,
                     release_date: res.data.release_date,
+                    first_air_date: res.data.first_air_date,
                     original_language: res.data.original_language,
-                    budget: res.data.budget,
-                    revenue: res.data.revenue,
                     rating_1: res.data.rating_1,
                     rating_2: res.data.rating_2,
                 });
@@ -55,12 +55,12 @@ function UpdateMovieDetails(props) {
             id: movie.id,
             imdb_id: movie.imdb_id,
             title: movie.title,
+            name: movie.name,
             overview: movie.overview,
             poster_path: movie.poster_path,
             release_date: movie.release_date,
+            first_air_date: movie.first_air_date,
             original_language: movie.original_language,
-            budget: movie.budget,
-            revenue: movie.revenue,
             rating_1: movie.rating_1,
             rating_2: movie.rating_2,
         };
@@ -127,19 +127,33 @@ function UpdateMovieDetails(props) {
                                 onChange={onChange}
                             />
                         </div>
+                        {movie.title ? (
+                            <div className='form-group'>
+                                <label htmlFor='title'>Title</label>
 
-                        <div className='form-group'>
-                            <label htmlFor='title'>Title</label>
+                                <input
+                                    type='text'
+                                    placeholder='Title of the Movie'
+                                    name='title'
+                                    className='form-control'
+                                    value={movie.title}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        ) : (
+                            <div className='form-group'>
+                                <label htmlFor='title'>Title</label>
 
-                            <input
-                                type='text'
-                                placeholder='Title of the Movie'
-                                name='title'
-                                className='form-control'
-                                value={movie.title}
-                                onChange={onChange}
-                            />
-                        </div>
+                                <input
+                                    type='text'
+                                    placeholder='Title of the Movie'
+                                    name='name'
+                                    className='form-control'
+                                    value={movie.name}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        )}
 
                         <div className='form-group'>
                             <label htmlFor='overview'>Overview</label>
@@ -166,19 +180,37 @@ function UpdateMovieDetails(props) {
                                 onChange={onChange}
                             />
                         </div>
+                        {movie.release_date ? (
+                            <div className='form-group'>
+                                <label htmlFor='release_date'>
+                                    Release date
+                                </label>
 
-                        <div className='form-group'>
-                            <label htmlFor='release_date'>Release date</label>
+                                <input
+                                    type='text'
+                                    placeholder='Release date of the Movie'
+                                    name='release_date'
+                                    className='form-control'
+                                    value={movie.release_date}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        ) : (
+                            <div className='form-group'>
+                                <label htmlFor='release_date'>
+                                    Release date
+                                </label>
 
-                            <input
-                                type='text'
-                                placeholder='Release date of the Movie'
-                                name='release_date'
-                                className='form-control'
-                                value={movie.release_date}
-                                onChange={onChange}
-                            />
-                        </div>
+                                <input
+                                    type='text'
+                                    placeholder='Release date of the Movie'
+                                    name='first_air_date'
+                                    className='form-control'
+                                    value={movie.first_air_date}
+                                    onChange={onChange}
+                                />
+                            </div>
+                        )}
 
                         <div className='form-group'>
                             <label htmlFor='original_language'>
@@ -191,32 +223,6 @@ function UpdateMovieDetails(props) {
                                 name='original_language'
                                 className='form-control'
                                 value={movie.original_language}
-                                onChange={onChange}
-                            />
-                        </div>
-
-                        <div className='form-group'>
-                            <label htmlFor='budget'>Budget</label>
-
-                            <input
-                                type='number'
-                                placeholder='Budget of the Movie'
-                                name='budget'
-                                className='form-control'
-                                value={movie.budget}
-                                onChange={onChange}
-                            />
-                        </div>
-
-                        <div className='form-group'>
-                            <label htmlFor='revenue'>Revenue</label>
-
-                            <input
-                                type='number'
-                                placeholder='Revenue of the Movie'
-                                name='revenue'
-                                className='form-control'
-                                value={movie.revenue}
                                 onChange={onChange}
                             />
                         </div>

@@ -48,7 +48,7 @@ function ShowMovieDetails(props) {
                     <tr>
                         <th scope='row'>3</th>
                         <td>Title</td>
-                        <td>{movie.title}</td>
+                        <td>{movie.title ?? movie.name}</td>
                     </tr>
                     <tr>
                         <th scope='row'>4</th>
@@ -63,7 +63,7 @@ function ShowMovieDetails(props) {
                     <tr>
                         <th scope='row'>6</th>
                         <td>Release Date</td>
-                        <td>{movie.release_date}</td>
+                        <td>{movie.release_date ?? movie.first_air_date}</td>
                     </tr>
                     <tr>
                         <th scope='row'>7</th>

@@ -14,6 +14,7 @@ const CreateMovie = (props) => {
         overview: '',
         poster_path: '',
         release_date: '',
+        first_air_date: '',
         original_language: '',
         budget: '',
         revenue: '',
@@ -35,6 +36,7 @@ const CreateMovie = (props) => {
                     title: '',
                     overview: '',
                     poster_path: '',
+                    first_air_date: '',
                     release_date: '',
                     original_language: '',
                     budget: '',
@@ -95,19 +97,33 @@ const CreateMovie = (props) => {
                                     onChange={onChange}
                                 />
                             </div>
+                            {movie.title ? (
+                                <div className='form-group'>
+                                    <label htmlFor='title'>Title</label>
 
-                            <div className='form-group'>
-                                <label htmlFor='title'>Title</label>
+                                    <input
+                                        type='text'
+                                        placeholder='Title of the Movie'
+                                        name='title'
+                                        className='form-control'
+                                        value={movie.title}
+                                        onChange={onChange}
+                                    />
+                                </div>
+                            ) : (
+                                <div className='form-group'>
+                                    <label htmlFor='title'>Title</label>
 
-                                <input
-                                    type='text'
-                                    placeholder='Title of the Movie'
-                                    name='title'
-                                    className='form-control'
-                                    value={movie.title}
-                                    onChange={onChange}
-                                />
-                            </div>
+                                    <input
+                                        type='text'
+                                        placeholder='Title of the Movie'
+                                        name='name'
+                                        className='form-control'
+                                        value={movie.name}
+                                        onChange={onChange}
+                                    />
+                                </div>
+                            )}
 
                             <div className='form-group'>
                                 <label htmlFor='overview'>Overview</label>
@@ -134,21 +150,37 @@ const CreateMovie = (props) => {
                                     onChange={onChange}
                                 />
                             </div>
+                            {movie.release_date ? (
+                                <div className='form-group'>
+                                    <label htmlFor='release_date'>
+                                        Release date
+                                    </label>
 
-                            <div className='form-group'>
-                                <label htmlFor='release_date'>
-                                    Release date
-                                </label>
+                                    <input
+                                        type='text'
+                                        placeholder='Release date of the Movie'
+                                        name='release_date'
+                                        className='form-control'
+                                        value={movie.release_date}
+                                        onChange={onChange}
+                                    />
+                                </div>
+                            ) : (
+                                <div className='form-group'>
+                                    <label htmlFor='release_date'>
+                                        Release date
+                                    </label>
 
-                                <input
-                                    type='text'
-                                    placeholder='Release date of the Movie'
-                                    name='release_date'
-                                    className='form-control'
-                                    value={movie.release_date}
-                                    onChange={onChange}
-                                />
-                            </div>
+                                    <input
+                                        type='text'
+                                        placeholder='Release date of the Movie'
+                                        name='first_air_date'
+                                        className='form-control'
+                                        value={movie.first_air_date}
+                                        onChange={onChange}
+                                    />
+                                </div>
+                            )}
 
                             <div className='form-group'>
                                 <label htmlFor='original_language'>
@@ -161,32 +193,6 @@ const CreateMovie = (props) => {
                                     name='original_language'
                                     className='form-control'
                                     value={movie.original_language}
-                                    onChange={onChange}
-                                />
-                            </div>
-
-                            <div className='form-group'>
-                                <label htmlFor='budget'>Budget</label>
-
-                                <input
-                                    type='number'
-                                    placeholder='Budget of the Movie'
-                                    name='budget'
-                                    className='form-control'
-                                    value={movie.budget}
-                                    onChange={onChange}
-                                />
-                            </div>
-
-                            <div className='form-group'>
-                                <label htmlFor='revenue'>Revenue</label>
-
-                                <input
-                                    type='number'
-                                    placeholder='Revenue of the Movie'
-                                    name='revenue'
-                                    className='form-control'
-                                    value={movie.revenue}
                                     onChange={onChange}
                                 />
                             </div>

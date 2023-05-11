@@ -14,6 +14,7 @@ const MovieCard = (props) => {
                     style={{ width: '25px' }}
                     alt='star'
                     src='https://www.freepnglogos.com/uploads/star-png/stars-png-images-star-clipart-images-icons-37.png'
+                    key={i}
                 />
             );
         }
@@ -30,6 +31,7 @@ const MovieCard = (props) => {
                     style={{ width: '25px' }}
                     alt='star'
                     src='https://www.freepnglogos.com/uploads/star-png/stars-png-images-star-clipart-images-icons-37.png'
+                    key={i}
                 />
             );
         }
@@ -45,9 +47,11 @@ const MovieCard = (props) => {
             />
             <div className='desc'>
                 <h2>
-                    <Link to={`/show-movie/${movie._id}`}>{movie.title}</Link>
+                    <Link to={`/show-movie/${movie._id}`}>
+                        {movie.title ?? movie.name}
+                    </Link>
                 </h2>
-                <p>{movie.release_date}</p>
+                <p>{movie.release_date ?? movie.first_air_date}</p>
                 <p>Eli's rating:</p>
                 <p>{stars_rating_1()}</p>
                 <p>Georgi's rating:</p>
