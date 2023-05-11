@@ -59,6 +59,13 @@
     color: white;
 }
 
+html,
+body,
+#app,
+#app > div {
+    height: 100%;
+}
+
 /* BookList Styles */
 .list {
     display: grid;
