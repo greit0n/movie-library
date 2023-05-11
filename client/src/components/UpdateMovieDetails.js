@@ -68,7 +68,7 @@ function UpdateMovieDetails(props) {
         axios
             .put(`http://localhost:8082/api/movies/${id}`, data)
             .then((res) => {
-                navigate(`/show-movie/${id}`);
+                navigate('/');
             })
             .catch((err) => {
                 console.log('Error in UpdateMovieDetails!');

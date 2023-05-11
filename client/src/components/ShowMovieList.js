@@ -79,7 +79,10 @@ function ShowMovieList() {
                     </div>
 
                     <div className='col-md-12'>
+                        <label htmlFor='search'>Search</label>
+
                         <input
+                            name='search'
                             type='text'
                             onChange={onChange}
                         ></input>

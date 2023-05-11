@@ -72,21 +72,11 @@ function ShowMovieDetails(props) {
                     </tr>
                     <tr>
                         <th scope='row'>8</th>
-                        <td>Budget</td>
-                        <td>{movie.budget}</td>
-                    </tr>
-                    <tr>
-                        <th scope='row'>9</th>
-                        <td>Revenue</td>
-                        <td>{movie.revenue}</td>
-                    </tr>
-                    <tr>
-                        <th scope='row'>10</th>
                         <td>Eli's rating</td>
                         <td>{movie.rating_1}</td>
                     </tr>
                     <tr>
-                        <th scope='row'>11</th>
+                        <th scope='row'>9</th>
                         <td>Georgi's rating</td>
                         <td>{movie.rating_2}</td>
                     </tr>
