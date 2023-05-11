@@ -8,9 +8,17 @@ const CreateMovie = (props) => {
     // Define the state with useState hook
     const navigate = useNavigate();
     const [movie, setMovie] = useState({
+        id: '',
+        imdb_id: '',
         title: '',
-        description: '',
-        img: '',
+        overview: '',
+        poster_path: '',
+        release_date: '',
+        original_language: '',
+        budget: '',
+        revenue: '',
+        rating_1: '',
+        rating_2: '',
     });
     const onChange = (e) => {
         setMovie({ ...movie, [e.target.name]: e.target.value });
@@ -22,9 +30,17 @@ const CreateMovie = (props) => {
             .post('http://localhost:8082/api/movies', movie)
             .then((res) => {
                 setMovie({
+                    id: '',
+                    imdb_id: '',
                     title: '',
-                    description: '',
-                    img: '',
+                    overview: '',
+                    poster_path: '',
+                    release_date: '',
+                    original_language: '',
+                    budget: '',
+                    revenue: '',
+                    rating_1: '',
+                    rating_2: '',
                 });
 
                 // Push to /
@@ -52,11 +68,37 @@ const CreateMovie = (props) => {
                         <h1 className='display-4 text-center'>Add Movie</h1>
                         <p className='lead text-center'>Create new movie</p>
 
-                        <form
-                            noValidate
-                            onSubmit={onSubmit}
-                        >
+                        <form onSubmit={onSubmit}>
                             <div className='form-group'>
+                                <label htmlFor='id'>Id</label>
+
+                                <input
+                                    type='number'
+                                    placeholder='Id of the Movie'
+                                    name='id'
+                                    className='form-control'
+                                    value={movie.id}
+                                    onChange={onChange}
+                                    required
+                                />
+                            </div>
+
+                            <div className='form-group'>
+                                <label htmlFor='imdb_id'>imDB ID</label>
+
+                                <input
+                                    type='text'
+                                    placeholder='imDB ID of the Movie'
+                                    name='imdb_id'
+                                    className='form-control'
+                                    value={movie.imdb_id}
+                                    onChange={onChange}
+                                />
+                            </div>
+
+                            <div className='form-group'>
+                                <label htmlFor='title'>Title</label>
+
                                 <input
                                     type='text'
                                     placeholder='Title of the Movie'
@@ -66,26 +108,113 @@ const CreateMovie = (props) => {
                                     onChange={onChange}
                                 />
                             </div>
-                            <br />
 
                             <div className='form-group'>
+                                <label htmlFor='overview'>Overview</label>
+
                                 <input
                                     type='text'
-                                    placeholder='Describe this movie'
-                                    name='description'
+                                    placeholder='Overview of the Movie'
+                                    name='overview'
                                     className='form-control'
-                                    value={movie.description}
+                                    value={movie.overview}
                                     onChange={onChange}
                                 />
                             </div>
 
                             <div className='form-group'>
+                                <label htmlFor='poster_path'>Image</label>
+
                                 <input
                                     type='text'
-                                    placeholder='URL of the movie image'
-                                    name='img'
+                                    placeholder='Image of the Movie'
+                                    name='poster_path'
                                     className='form-control'
-                                    value={movie.img}
+                                    value={movie.poster_path}
+                                    onChange={onChange}
+                                />
+                            </div>
+
+                            <div className='form-group'>
+                                <label htmlFor='release_date'>
+                                    Release date
+                                </label>
+
+                                <input
+                                    type='text'
+                                    placeholder='Release date of the Movie'
+                                    name='release_date'
+                                    className='form-control'
+                                    value={movie.release_date}
+                                    onChange={onChange}
+                                />
+                            </div>
+
+                            <div className='form-group'>
+                                <label htmlFor='original_language'>
+                                    Original language
+                                </label>
+
+                                <input
+                                    type='text'
+                                    placeholder='Original language of the Movie'
+                                    name='original_language'
+                                    className='form-control'
+                                    value={movie.original_language}
+                                    onChange={onChange}
+                                />
+                            </div>
+
+                            <div className='form-group'>
+                                <label htmlFor='budget'>Budget</label>
+
+                                <input
+                                    type='number'
+                                    placeholder='Budget of the Movie'
+                                    name='budget'
+                                    className='form-control'
+                                    value={movie.budget}
+                                    onChange={onChange}
+                                />
+                            </div>
+
+                            <div className='form-group'>
+                                <label htmlFor='revenue'>Revenue</label>
+
+                                <input
+                                    type='number'
+                                    placeholder='Revenue of the Movie'
+                                    name='revenue'
+                                    className='form-control'
+                                    value={movie.revenue}
+                                    onChange={onChange}
+                                />
+                            </div>
+
+                            <div className='form-group'>
+                                <label htmlFor='rating_1'>Eli's rating</label>
+
+                                <input
+                                    type='number'
+                                    placeholder='Rate the movie from 1/10'
+                                    name='rating_1'
+                                    className='form-control'
+                                    value={movie.rating_1}
+                                    onChange={onChange}
+                                />
+                            </div>
+
+                            <div className='form-group'>
+                                <label htmlFor='rating_2'>
+                                    Georgi's rating
+                                </label>
+
+                                <input
+                                    type='number'
+                                    placeholder='Rate the movie from 1/10'
+                                    name='rating_2'
+                                    className='form-control'
+                                    value={movie.rating_2}
                                     onChange={onChange}
                                 />
                             </div>

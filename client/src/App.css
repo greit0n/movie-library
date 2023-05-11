@@ -77,7 +77,6 @@
 }
 
 .desc {
-    height: 130px;
     padding: 10px;
 }
 
@@ -95,4 +94,9 @@ p {
     color: #6c757d;
     font-size: 1em;
     padding: 10px 0 10px 0;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
 }

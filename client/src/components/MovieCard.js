@@ -8,16 +8,16 @@ const MovieCard = (props) => {
     return (
         <div className='card-container'>
             <img
-                src={movie.img}
+                src={movie.poster_path}
                 alt='Movies'
-                height={200}
             />
             <div className='desc'>
                 <h2>
                     <Link to={`/show-movie/${movie._id}`}>{movie.title}</Link>
                 </h2>
-                <h3>{movie.title}</h3>
-                <p>{movie.description}</p>
+                <p>{movie.release_date}</p>
+                <p>Eli's rating: 1/{movie.rating_1}</p>
+                <p>Georgi's rating: 1/{movie.rating_2}</p>
             </div>
         </div>
     );
