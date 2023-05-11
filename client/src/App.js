@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
-import CreateBook from './components/CreateBook';
-import ShowBookList from './components/ShowBookList';
-import ShowBookDetails from './components/ShowBookDetails';
-import UpdateBookInfo from './components/UpdateBookInfo';
+import CreateMovie from './components/CreateMovie';
+import ShowMovieList from './components/ShowMovieList';
+import ShowMovieDetails from './components/ShowMovieDetails';
+import UpdateMovieDetails from './components/UpdateMovieDetails';
 
 const App = () => {
     return (
@@ -14,19 +14,19 @@ const App = () => {
                     <Route
                         exact
                         path='/'
-                        element={<ShowBookList />}
+                        element={<ShowMovieList />}
                     />
                     <Route
-                        path='/create-book'
-                        element={<CreateBook />}
+                        path='/create-movie'
+                        element={<CreateMovie />}
                     />
                     <Route
-                        path='/edit-book/:id'
-                        element={<UpdateBookInfo />}
+                        path='/edit-movie/:id'
+                        element={<UpdateMovieDetails />}
                     />
                     <Route
-                        path='/show-book/:id'
-                        element={<ShowBookDetails />}
+                        path='/show-movie/:id'
+                        element={<ShowMovieDetails />}
                     />
                 </Routes>
             </div>
