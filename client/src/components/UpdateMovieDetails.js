@@ -6,7 +6,6 @@ import '../App.css';
 function UpdateMovieDetails(props) {
     const [movie, setMovie] = useState({
         id: '',
-        imdb_id: '',
         title: '',
         name: '',
         overview: '',
@@ -27,7 +26,6 @@ function UpdateMovieDetails(props) {
             .then((res) => {
                 setMovie({
                     id: res.data.id,
-                    imdb_id: res.data.imdb_id,
                     title: res.data.title,
                     name: res.data.name,
                     overview: res.data.overview,
@@ -53,7 +51,6 @@ function UpdateMovieDetails(props) {
 
         const data = {
             id: movie.id,
-            imdb_id: movie.imdb_id,
             title: movie.title,
             name: movie.name,
             overview: movie.overview,
@@ -115,18 +112,6 @@ function UpdateMovieDetails(props) {
                             />
                         </div>
 
-                        <div className='form-group'>
-                            <label htmlFor='imdb_id'>imDB ID</label>
-
-                            <input
-                                type='text'
-                                placeholder='imDB ID of the Movie'
-                                name='imdb_id'
-                                className='form-control'
-                                value={movie.imdb_id}
-                                onChange={onChange}
-                            />
-                        </div>
                         {movie.title ? (
                             <div className='form-group'>
                                 <label htmlFor='title'>Title</label>

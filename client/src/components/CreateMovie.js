@@ -9,7 +9,6 @@ const CreateMovie = (props) => {
     const navigate = useNavigate();
     const [movie, setMovie] = useState({
         id: '',
-        imdb_id: '',
         title: '',
         overview: '',
         poster_path: '',
@@ -32,7 +31,6 @@ const CreateMovie = (props) => {
             .then((res) => {
                 setMovie({
                     id: '',
-                    imdb_id: '',
                     title: '',
                     overview: '',
                     poster_path: '',
@@ -85,18 +83,6 @@ const CreateMovie = (props) => {
                                 />
                             </div>
 
-                            <div className='form-group'>
-                                <label htmlFor='imdb_id'>imDB ID</label>
-
-                                <input
-                                    type='text'
-                                    placeholder='imDB ID of the Movie'
-                                    name='imdb_id'
-                                    className='form-control'
-                                    value={movie.imdb_id}
-                                    onChange={onChange}
-                                />
-                            </div>
                             {movie.title ? (
                                 <div className='form-group'>
                                     <label htmlFor='title'>Title</label>

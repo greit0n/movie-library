@@ -5,9 +5,6 @@ const MovieSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    imdb_id: {
-        type: String,
-    },
     title: {
         type: String,
     },

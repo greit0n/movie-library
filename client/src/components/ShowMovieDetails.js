@@ -41,11 +41,6 @@ function ShowMovieDetails(props) {
                         <td>{movie.id}</td>
                     </tr>
                     <tr>
-                        <th scope='row'>2</th>
-                        <td>imDB ID</td>
-                        <td>{movie.imdb_id}</td>
-                    </tr>
-                    <tr>
                         <th scope='row'>3</th>
                         <td>Title</td>
                         <td>{movie.title ?? movie.name}</td>
